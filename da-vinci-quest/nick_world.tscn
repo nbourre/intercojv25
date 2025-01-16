@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://d27fprkusbnte"]
+
+[ext_resource type="PackedScene" uid="uid://bbldmnvtifsvj" path="res://leonardo.tscn" id="1_6w0ty"]
+[ext_resource type="PackedScene" uid="uid://d02p3c5cse7d6" path="res://platform.tscn" id="2_6xb7t"]
+
+[node name="NickWorld" type="Node2D"]
+
+[node name="Base" parent="." instance=ExtResource("2_6xb7t")]
+position = Vector2(466, 370)
+length = 10
+
+[node name="Level_01" parent="." instance=ExtResource("2_6xb7t")]
+position = Vector2(468, 285)
+rotation = 0.0523599
+length = 10
+
+[node name="Level_03" parent="." instance=ExtResource("2_6xb7t")]
+position = Vector2(468, 115)
+rotation = 0.0523599
+length = 10
+
+[node name="Level_02" parent="." instance=ExtResource("2_6xb7t")]
+position = Vector2(468, 215)
+rotation = -0.0523599
+length = 10
+
+[node name="Leonardo" parent="." instance=ExtResource("1_6w0ty")]
+position = Vector2(519, 345)
