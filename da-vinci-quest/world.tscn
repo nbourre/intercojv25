@@ -1,11 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://d127jm0gdq76m"]
+[gd_scene load_steps=4 format=3 uid="uid://d127jm0gdq76m"]
 
+[ext_resource type="PackedScene" uid="uid://btrswcvelgerb" path="res://level.tscn" id="1_ba68g"]
 [ext_resource type="PackedScene" uid="uid://bbldmnvtifsvj" path="res://leonardo.tscn" id="1_vvejg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_33p4a"]
 size = Vector2(200, 20)
 
 [node name="World" type="Node2D"]
+
+[node name="Level" parent="." instance=ExtResource("1_ba68g")]
+position = Vector2(-44, 102)
 
 [node name="Leonardo" parent="." instance=ExtResource("1_vvejg")]
 position = Vector2(1, -16)
