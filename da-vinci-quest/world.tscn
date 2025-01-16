@@ -1,3 +1,23 @@
-[gd_scene format=3 uid="uid://d127jm0gdq76m"]
+[gd_scene load_steps=3 format=3 uid="uid://d127jm0gdq76m"]
+
+[ext_resource type="PackedScene" uid="uid://bbldmnvtifsvj" path="res://leonardo.tscn" id="1_vvejg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_33p4a"]
+size = Vector2(200, 20)
 
 [node name="World" type="Node2D"]
+
+[node name="Leonardo" parent="." instance=ExtResource("1_vvejg")]
+position = Vector2(1, -16)
+
+[node name="QuickFloor" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="QuickFloor"]
+position = Vector2(0, 20)
+shape = SubResource("RectangleShape2D_33p4a")
+
+[node name="ColorRect" type="ColorRect" parent="QuickFloor"]
+offset_left = -100.0
+offset_top = 10.0
+offset_right = 100.0
+offset_bottom = 30.0

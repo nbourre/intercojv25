@@ -9,3 +9,7 @@ Le thème de cette année est "La renaissance".
   - Inventions
 - Pixel art
 - 
+
+# Animations
+- Les animations sont faites avec https://1up-indie2.itch.io/character-creation-tool-full
+- 

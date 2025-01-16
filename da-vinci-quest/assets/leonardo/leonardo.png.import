@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d0av5oa1wtjtp"
-path="res://.godot/imported/leonardo_attack.png-3c562dba9e89f8c8ea53b3b8cf8c1ee8.ctex"
+uid="uid://brxnxuavvegif"
+path="res://.godot/imported/leonardo.png-a25e32de6fdb86c596eaaba7848b8a08.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/leonardo/leonardo_attack.png"
-dest_files=["res://.godot/imported/leonardo_attack.png-3c562dba9e89f8c8ea53b3b8cf8c1ee8.ctex"]
+source_file="res://assets/leonardo/leonardo.png"
+dest_files=["res://.godot/imported/leonardo.png-a25e32de6fdb86c596eaaba7848b8a08.ctex"]
 
 [params]
 
