@@ -1,9 +1,12 @@
-[gd_scene load_steps=16 format=3 uid="uid://bbldmnvtifsvj"]
+[gd_scene load_steps=19 format=3 uid="uid://bbldmnvtifsvj"]
 
 [ext_resource type="Texture2D" uid="uid://brxnxuavvegif" path="res://assets/leonardo/leonardo.png" id="1_8d541"]
 [ext_resource type="Script" path="res://player.gd" id="1_qr3l2"]
-[ext_resource type="Script" path="res://scripts/player/falling_state.gd" id="3_1d70f"]
-[ext_resource type="Script" path="res://scripts/player/idle_state.gd" id="3_6w3m4"]
+[ext_resource type="Script" path="res://stateMachine/state_machine.gd" id="3_pqjpf"]
+[ext_resource type="Script" path="res://stateMachine/falling.gd" id="4_ik2qt"]
+[ext_resource type="Script" path="res://stateMachine/walk.gd" id="5_bf1m8"]
+[ext_resource type="Script" path="res://stateMachine/idle.gd" id="5_e8e7q"]
+[ext_resource type="Script" path="res://stateMachine/jump.gd" id="7_wdyef"]
 
 [sub_resource type="Animation" id="Animation_6k3bj"]
 length = 0.001
@@ -187,17 +190,21 @@ libraries = {
 visible = false
 shape = SubResource("CapsuleShape2D_dl638")
 
-[node name="StateMachine" type="Node" parent="."]
-script = ExtResource("3_6w3m4")
+[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
+script = ExtResource("3_pqjpf")
+initial_state = NodePath("Falling")
 
 [node name="Falling" type="Node" parent="StateMachine"]
-script = ExtResource("3_1d70f")
+script = ExtResource("4_ik2qt")
 
 [node name="Walk" type="Node" parent="StateMachine"]
-script = ExtResource("3_1d70f")
+script = ExtResource("5_bf1m8")
 
 [node name="Idle" type="Node" parent="StateMachine"]
-script = ExtResource("3_6w3m4")
+script = ExtResource("5_e8e7q")
+
+[node name="Jump" type="Node" parent="StateMachine"]
+script = ExtResource("7_wdyef")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(4, 4)
