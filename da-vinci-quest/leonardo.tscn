@@ -172,7 +172,7 @@ _data = {
 radius = 6.0
 height = 18.0
 
-[node name="Leonardo" type="CharacterBody2D"]
+[node name="Leonardo" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_qr3l2")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

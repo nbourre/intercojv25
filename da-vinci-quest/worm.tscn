@@ -1,10 +1,12 @@
-[gd_scene load_steps=14 format=3 uid="uid://x7h511tt0by8"]
+[gd_scene load_steps=16 format=3 uid="uid://x7h511tt0by8"]
 
 [ext_resource type="Script" path="res://worm.gd" id="1_dd1kx"]
 [ext_resource type="Texture2D" uid="uid://bnckfxyyccyl8" path="res://assets/Fire Worm/Sprites/Worm/output.png" id="1_gtjrs"]
 [ext_resource type="Script" path="res://StateMachine/state_machine.gd" id="2_7jgsv"]
+[ext_resource type="PackedScene" uid="uid://df3esisiydlc5" path="res://bullet_pool.tscn" id="2_hwvpo"]
 [ext_resource type="Script" path="res://StateMachine/Worm/idle.gd" id="3_gjm5c"]
 [ext_resource type="Script" path="res://StateMachine/Worm/walk.gd" id="5_tl1pp"]
+[ext_resource type="PackedScene" uid="uid://dn5jnl4qlpew6" path="res://fire_ball.tscn" id="7_41otf"]
 
 [sub_resource type="Animation" id="Animation_ouit2"]
 resource_name = "Idle"
@@ -117,7 +119,8 @@ size = Vector2(54, 39)
 
 [node name="Worm" type="CharacterBody2D"]
 script = ExtResource("1_dd1kx")
-move_distance = 50
+
+[node name="BulletPool" parent="." instance=ExtResource("2_hwvpo")]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_gtjrs")
@@ -142,3 +145,4 @@ script = ExtResource("3_gjm5c")
 
 [node name="Walk" type="Node" parent="StateMachine"]
 script = ExtResource("5_tl1pp")
+bullet_scene = ExtResource("7_41otf")

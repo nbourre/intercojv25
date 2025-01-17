@@ -37,3 +37,4 @@ offset_bottom = -29.0
 
 [node name="Worm" parent="." instance=ExtResource("2_mnoen")]
 position = Vector2(-39, -70)
+move_distance = 50
