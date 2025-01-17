@@ -1,9 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://1vstyf38s3aq"]
+[gd_scene load_steps=3 format=3 uid="uid://bthpa17fv84ja"]
+
+[ext_resource type="Texture2D" uid="uid://c2xonqbmq2ll0" path="res://assets/sprites/32x32_wheel100.png" id="1_4r7sk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hr7il"]
 radius = 16.0
 
 [node name="Ball" type="RigidBody2D"]
+modulate = Color(0.509804, 0.509804, 0.227451, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_hr7il")
+
+[node name="32x32Wheel100" type="Sprite2D" parent="."]
+texture = ExtResource("1_4r7sk")
