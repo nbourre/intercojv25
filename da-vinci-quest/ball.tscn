@@ -1,3 +1,9 @@
-[gd_scene format=3 uid="uid://1vstyf38s3aq"]
+[gd_scene load_steps=2 format=3 uid="uid://1vstyf38s3aq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hr7il"]
+radius = 16.0
 
 [node name="Ball" type="RigidBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_hr7il")
