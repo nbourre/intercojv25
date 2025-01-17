@@ -4,6 +4,8 @@ class_name PlayerAttack
 var player 
 var anim_player : AnimationPlayer
 
+var attack_sound = preload("res://assets/Sounds/hit.wav")
+
 func manage_input() -> void:	
 	var dir : Vector2 = Input.get_vector(player.left, player.right, player.up, player.down).normalized()
 
@@ -13,6 +15,8 @@ func enter():
 
 func update(delta: float) -> void:
 	#print("attack")
+	
+	AudioManager.play_sound(attack_sound)
 	if not anim_player :
 		anim_player = player.get_animation_player()
 	
