@@ -10,19 +10,20 @@ position = Vector2(466, 370)
 length = 10
 
 [node name="Level_01" parent="." instance=ExtResource("2_6xb7t")]
-position = Vector2(468, 285)
+position = Vector2(468, 275)
 rotation = 0.0523599
-length = 10
-
-[node name="Level_03" parent="." instance=ExtResource("2_6xb7t")]
-position = Vector2(468, 115)
-rotation = 0.0523599
-length = 10
+length = 8
 
 [node name="Level_02" parent="." instance=ExtResource("2_6xb7t")]
-position = Vector2(468, 215)
+position = Vector2(528, 195)
 rotation = -0.0523599
-length = 10
+scale = Vector2(1, 1)
+length = 8
+
+[node name="Level_03" parent="." instance=ExtResource("2_6xb7t")]
+position = Vector2(468, 85)
+rotation = 0.0523599
+length = 8
 
 [node name="Leonardo" parent="." instance=ExtResource("1_6w0ty")]
 position = Vector2(519, 345)
