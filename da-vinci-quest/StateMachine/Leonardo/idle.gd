@@ -1,7 +1,6 @@
 class_name PlayerIdle
 extends BaseState
 
-
 var player 
 var anim_player : AnimationPlayer
 

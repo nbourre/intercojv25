@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://d27fprkusbnte"]
+[gd_scene load_steps=4 format=3 uid="uid://d27fprkusbnte"]
 
 [ext_resource type="PackedScene" uid="uid://bbldmnvtifsvj" path="res://leonardo.tscn" id="1_6w0ty"]
 [ext_resource type="PackedScene" uid="uid://d02p3c5cse7d6" path="res://platform.tscn" id="2_6xb7t"]
+[ext_resource type="PackedScene" uid="uid://x7h511tt0by8" path="res://worm.tscn" id="3_2meti"]
 
 [node name="NickWorld" type="Node2D"]
 
@@ -26,3 +27,6 @@ length = 8
 
 [node name="Leonardo" parent="." instance=ExtResource("1_6w0ty")]
 position = Vector2(519, 345)
+
+[node name="Worm" parent="." instance=ExtResource("3_2meti")]
+position = Vector2(568, 68)

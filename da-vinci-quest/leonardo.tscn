@@ -3,11 +3,11 @@
 [ext_resource type="Texture2D" uid="uid://brxnxuavvegif" path="res://assets/leonardo/leonardo.png" id="1_8d541"]
 [ext_resource type="Script" path="res://player.gd" id="1_qr3l2"]
 [ext_resource type="Script" path="res://StateMachine/state_machine.gd" id="3_pqjpf"]
-[ext_resource type="Script" path="res://StateMachine/falling.gd" id="4_ik2qt"]
-[ext_resource type="Script" path="res://StateMachine/walk.gd" id="5_bf1m8"]
-[ext_resource type="Script" path="res://StateMachine/idle.gd" id="5_e8e7q"]
-[ext_resource type="Script" path="res://StateMachine/jump.gd" id="7_wdyef"]
-[ext_resource type="Script" path="res://StateMachine/attack.gd" id="8_xyjh8"]
+[ext_resource type="Script" path="res://StateMachine/Leonardo/falling.gd" id="4_ik2qt"]
+[ext_resource type="Script" path="res://StateMachine/Leonardo/walk.gd" id="5_bf1m8"]
+[ext_resource type="Script" path="res://StateMachine/Leonardo/idle.gd" id="5_e8e7q"]
+[ext_resource type="Script" path="res://StateMachine/Leonardo/jump.gd" id="7_wdyef"]
+[ext_resource type="Script" path="res://StateMachine/Leonardo/attack.gd" id="8_xyjh8"]
 
 [sub_resource type="Animation" id="Animation_6k3bj"]
 length = 0.001
