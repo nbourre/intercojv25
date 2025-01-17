@@ -17,7 +17,6 @@ length = 8
 [node name="Level_02" parent="." instance=ExtResource("2_6xb7t")]
 position = Vector2(528, 195)
 rotation = -0.0523599
-scale = Vector2(1, 1)
 length = 8
 
 [node name="Level_03" parent="." instance=ExtResource("2_6xb7t")]

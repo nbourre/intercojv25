@@ -1,5 +1,6 @@
-extends BaseState
 class_name PlayerWalk
+extends BaseState
+
 
 var player 
 var anim_player : AnimationPlayer

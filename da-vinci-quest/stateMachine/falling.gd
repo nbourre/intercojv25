@@ -1,5 +1,5 @@
-extends BaseState
 class_name PlayerFall
+extends BaseState
 
 var player 
 var anim_player : AnimationPlayer
