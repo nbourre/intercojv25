@@ -7,7 +7,7 @@
 [ext_resource type="Script" path="res://stateMachine/walk.gd" id="5_bf1m8"]
 [ext_resource type="Script" path="res://stateMachine/idle.gd" id="5_e8e7q"]
 [ext_resource type="Script" path="res://stateMachine/jump.gd" id="7_wdyef"]
-[ext_resource type="Script" path="res://attack.gd" id="8_xyjh8"]
+[ext_resource type="Script" path="res://stateMachine/attack.gd" id="8_xyjh8"]
 
 [sub_resource type="Animation" id="Animation_6k3bj"]
 length = 0.001
