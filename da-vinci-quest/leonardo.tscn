@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://bbldmnvtifsvj"]
+[gd_scene load_steps=20 format=3 uid="uid://bbldmnvtifsvj"]
 
 [ext_resource type="Texture2D" uid="uid://brxnxuavvegif" path="res://assets/leonardo/leonardo.png" id="1_8d541"]
 [ext_resource type="Script" path="res://player.gd" id="1_qr3l2"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://stateMachine/walk.gd" id="5_bf1m8"]
 [ext_resource type="Script" path="res://stateMachine/idle.gd" id="5_e8e7q"]
 [ext_resource type="Script" path="res://stateMachine/jump.gd" id="7_wdyef"]
+[ext_resource type="Script" path="res://attack.gd" id="8_xyjh8"]
 
 [sub_resource type="Animation" id="Animation_6k3bj"]
 length = 0.001
@@ -206,5 +207,10 @@ script = ExtResource("5_e8e7q")
 [node name="Jump" type="Node" parent="StateMachine"]
 script = ExtResource("7_wdyef")
 
+[node name="Attack" type="Node" parent="StateMachine"]
+script = ExtResource("8_xyjh8")
+
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(4, 4)
+
+[connection signal="animation_finished" from="AnimationPlayer" to="StateMachine/Attack" method="_on_animation_player_animation_finished"]

@@ -6,6 +6,7 @@ var right : String = "right"
 var up : String = "up"
 var down : String = "down"
 var jump : String = "jump"
+var attack : String = "attack"
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
