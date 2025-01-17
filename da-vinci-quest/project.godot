@@ -70,6 +70,8 @@ mute={
 
 2d_physics/layer_1="Player"
 2d_physics/layer_2="Blocker"
+2d_physics/layer_3="Coins"
+2d_physics/layer_4="Ball"
 
 [rendering]
 

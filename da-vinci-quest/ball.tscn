@@ -7,6 +7,7 @@ radius = 16.0
 
 [node name="Ball" type="RigidBody2D"]
 modulate = Color(0.509804, 0.509804, 0.227451, 1)
+collision_layer = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_hr7il")

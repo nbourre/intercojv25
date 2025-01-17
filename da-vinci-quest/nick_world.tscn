@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://d27fprkusbnte"]
+[gd_scene load_steps=6 format=3 uid="uid://d27fprkusbnte"]
 
 [ext_resource type="PackedScene" uid="uid://bbldmnvtifsvj" path="res://leonardo.tscn" id="1_6w0ty"]
 [ext_resource type="PackedScene" uid="uid://d02p3c5cse7d6" path="res://platform.tscn" id="2_6xb7t"]
 [ext_resource type="PackedScene" uid="uid://bthpa17fv84ja" path="res://ball.tscn" id="2_rnqm7"]
 [ext_resource type="PackedScene" uid="uid://cobndpdpp013q" path="res://blocker.tscn" id="4_3ngh7"]
+[ext_resource type="PackedScene" uid="uid://dcgm8estelxmj" path="res://coin.tscn" id="5_jwiy3"]
 
 [node name="NickWorld" type="Node2D"]
 
@@ -41,3 +42,8 @@ position = Vector2(784, 363)
 
 [node name="Blocker3" parent="." instance=ExtResource("4_3ngh7")]
 position = Vector2(474, 299)
+
+[node name="Coins" type="Node" parent="."]
+
+[node name="Coin" parent="Coins" instance=ExtResource("5_jwiy3")]
+position = Vector2(599, 242)
