@@ -6,7 +6,7 @@ var anim_player : AnimationPlayer
 
 @export var jump_force := -300.0
 
-#var jump_sound = preload("res://Assets/Music/jump_sound.wav")
+var jump_sound = preload("res://assets/Sounds/jump.wav")
 
 func _ready():
 	player = get_parent().get_parent()
@@ -22,7 +22,7 @@ func update(delta : float) -> void:
 
 	var dir := manage_input()
 	
-	#AudioManager.play_sound(jump_sound)
+	AudioManager.play_sound(jump_sound)
 	player.velocity.y = jump_force
 	
 	if(!player.is_on_floor()):
@@ -33,7 +33,7 @@ func physics_update(delta: float) -> void:
 	
 	if (player.velocity.length() > 0) :
 		if (player.velocity.y > 0) :
-			#AudioManager.play_sound(jump_sound)
+			AudioManager.play_sound(jump_sound)
 			anim_player.play("jump")
 			if (player.velocity.x > 0) :
 				player.sprite.flip_h = false
