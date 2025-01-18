@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://df3esisiydlc5"]
 
-[ext_resource type="PackedScene" uid="uid://1vstyf38s3aq" path="res://ball.tscn" id="2_vaabq"]
+[ext_resource type="PackedScene" uid="uid://bthpa17fv84ja" path="res://ball.tscn" id="2_vaabq"]
 
 [sub_resource type="GDScript" id="GDScript_jmolh"]
 script/source = "extends Node
@@ -14,6 +14,7 @@ var available_bullets : Array = []
 func _ready():
 	for i in range(pool_size):
 		var bullet = bullet_scene.instantiate()
+		#FIXME
 		bullet.connect(\"bullet_out_of_screen\", Callable(self, \"_on_bullet_out_of_screen\"))
 		add_child(bullet)
 		bullet.visible = false 
