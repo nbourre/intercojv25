@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://df3esisiydlc5"]
+
+[ext_resource type="PackedScene" uid="uid://1vstyf38s3aq" path="res://ball.tscn" id="2_vaabq"]
+
+[sub_resource type="GDScript" id="GDScript_jmolh"]
+script/source = "extends Node
+
+@export var bullet_scene : PackedScene 
+@export var pool_size : int = 20 
+
+var bullet_pool : Array = []
+var available_bullets : Array = []
+
+func _ready():
+	for i in range(pool_size):
+		var bullet = bullet_scene.instantiate()
+		bullet.connect(\"bullet_out_of_screen\", Callable(self, \"_on_bullet_out_of_screen\"))
+		add_child(bullet)
+		bullet.visible = false 
+		bullet_pool.append(bullet)
+		available_bullets.append(bullet)
+
+func get_bullet() -> Node2D:
+	if available_bullets.size() > 0:
+		var bullet = available_bullets.pop_back()
+		bullet.visible = true 
+		return bullet
+	else:
+		return null 
+
+func _on_bullet_out_of_screen(bullet):
+	bullet.visible = false 
+	bullet.reset()
+	available_bullets.append(bullet) 
+"
+
+[node name="BulletPool" type="Node"]
+script = SubResource("GDScript_jmolh")
+bullet_scene = ExtResource("2_vaabq")

@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://d127jm0gdq76m"]
+[gd_scene load_steps=4 format=3 uid="uid://d127jm0gdq76m"]
 
 [ext_resource type="PackedScene" uid="uid://bbldmnvtifsvj" path="res://leonardo.tscn" id="1_vvejg"]
+[ext_resource type="PackedScene" uid="uid://x7h511tt0by8" path="res://worm.tscn" id="2_mnoen"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_33p4a"]
 size = Vector2(200, 20)
@@ -21,3 +22,19 @@ offset_left = -100.0
 offset_top = 10.0
 offset_right = 100.0
 offset_bottom = 30.0
+
+[node name="QuickFloor2" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="QuickFloor2"]
+position = Vector2(2, -39)
+shape = SubResource("RectangleShape2D_33p4a")
+
+[node name="ColorRect" type="ColorRect" parent="QuickFloor2"]
+offset_left = -97.0
+offset_top = -49.0
+offset_right = 103.0
+offset_bottom = -29.0
+
+[node name="Worm" parent="." instance=ExtResource("2_mnoen")]
+position = Vector2(-39, -70)
+move_distance = 50

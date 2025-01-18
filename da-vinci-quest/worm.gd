@@ -1,25 +1,26 @@
-class_name Player
+class_name Worm
 extends CharacterBody2D
 
-var left : String = "left"
-var right : String = "right"
-var up : String = "up"
-var down : String = "down"
-var jump : String = "jump"
-var attack : String = "attack"
+@export var speed = 50  # Adjust this to change the NPC's speed
+@export var move_distance = 100  # The distance the NPC will move in each direction
 
-const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
 var anim_player : AnimationPlayer
 var sprite : Sprite2D
-var direction : Vector2
+
+var start_position : Vector2
+var direction : int = 1 
 
 func _ready():
 	anim_player = $AnimationPlayer
 	sprite = $Sprite2D
+	start_position = global_position
 
 func _physics_process(delta):
 	anim_player = $AnimationPlayer
+	
+	if not is_on_floor():
+		velocity += get_gravity() * delta
+		
 	move_and_slide()
 	
 func get_animation_player () -> AnimationPlayer:
